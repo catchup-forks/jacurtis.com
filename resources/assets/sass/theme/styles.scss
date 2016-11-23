@@ -1,0 +1,231 @@
+/*
+|--------------------------------------------------------------------------
+| Canvas Child-Theme : Endgadget
+|
+| Author : Ben Fesili <https://github.com/benfes>
+| Source : https://github.com/austintoddj/palette/tree/master/modern-blue
+|
+| Compatiblity : Canvas v2.1.5 or greater
+|--------------------------------------------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:300,400');
+//@import url('https://fonts.googleapis.com/css?family=Yellowtail');
+
+$bodyBackground: #fff;
+$headerColor: #2196F3;
+$heroFontFamily: 'Merriweather';
+$heroFontSize: 3em; // Not Used
+$subheadingColor: #9e9e9e;
+$subheadingFont: $heroFontFamily;
+$standardFont: 'Open Sans';
+$standardFontSize: 18px;
+$standardFontLineHeight: 30px;
+$postHeaderFont: $heroFontFamily;
+$postPreviewContainerColor: $headerColor;
+$postTitleColor: white;
+$postPreviewPadding: 15px;
+$linkColor: $headerColor;
+$hrColor: #dddddd;
+$imageBorderColor: #ccc;
+$postPreviewContainerBackgroundColor: #fff;
+$postPreviewContainerBorderColor: #fff;
+$postBorderColor: #fff;
+
+// Basic Styling
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heroFontFamily;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 21px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+body{
+  background: $bodyBackground;
+  hr{
+    border-top: 1px solid $hrColor;
+    margin: 15px 0px;
+    border-color: $hrColor;
+    color: $hrColor;
+  }
+  #head-c{
+    h1{
+      font-family: $heroFontFamily !important;
+      padding-bottom: 0.3em;
+      font-weight: bold;
+      a{
+        color: $headerColor !important;
+      }
+    }
+    h3{
+      color: $subheadingColor !important;
+      font-family: $subheadingFont;
+    }
+  }
+  .post-preview{
+    background-color: $postPreviewContainerBackgroundColor;
+    border: solid thin $postPreviewContainerBorderColor;
+    .post-title{
+      font-family: $heroFontFamily !important;
+      font-size: 48px;
+      margin: 0;
+      padding: 0.3em;
+      padding-top: 0.5em;
+      text-align: center;
+      a{
+        &:hover{
+          color: $linkColor;
+        }
+      }
+    }
+    p{
+      padding: 0 $postPreviewPadding;
+      margin: 1em 0;
+      font-family: $standardFont;
+      font-size: $standardFontSize;
+      line-height: $standardFontLineHeight;
+      &.post-meta{
+        color: $subheadingColor;
+        border-bottom: solid thin $postBorderColor;
+        text-align: center;
+      }
+      a{
+        color: $linkColor !important;
+        &:before{
+          background-color: $linkColor;
+        }
+      }
+    }
+  }
+  #post{
+    background-color: white;
+    padding: 0 10%;
+    h1, h2, h3, h4, h5, h6{
+      padding: 0 15px;
+    }
+
+    h2, h3 {
+      text-transform: uppercase;
+    }
+
+    p{
+      padding: 0 1em;
+      font-family: $standardFont;
+      font-size: $standardFontSize;
+      line-height: $standardFontLineHeight;
+    }
+    img{
+
+      &.author-img{
+        position: relative;
+        margin: 0 auto;
+        float: none !important;
+      }
+    }
+    a{
+      color: $linkColor !important;
+      &:before{
+        background-color: $linkColor;
+      }
+    }
+    table{
+      position: relative;
+      width: 100%;
+    }
+    pre {
+      padding: 18px;
+    }
+    blockquote {
+      border: none;
+
+      p {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        border-left: 3px solid rgba(0, 0, 0, 0.8);
+        padding-left: 20px;
+        margin-left: -23px;
+      }
+    }
+
+    code {
+      font-size: 14px !important;
+    }
+
+    .post-page-title{
+      font-family: $postHeaderFont !important;
+      font-size: 48px;
+      text-align: center;
+      border-bottom: solid thin $postBorderColor;
+      padding-bottom: 1em;
+    }
+    .post-page-meta{
+      text-align: center;
+    }
+    .post-main-content {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #auth-name{
+      text-align: center;
+    }
+  }
+  #scroll-to-top{
+    background-color: $headerColor !important;
+  }
+  .pager{
+    .previous, .next{
+      a{
+        background-color: $headerColor;
+        padding: 0.3em 1em !important;
+        color: $postTitleColor;
+      }
+    }
+  }
+}
+
+#post-image {
+  padding: 0;
+
+  img.post-hero {
+    width: 100vw;
+    height: 100vh;
+    max-height: 475px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 992px){
+  .col-md-offset-1{
+    margin: 0;
+    width: 100%;
+  }
+  img{
+    &.post-hero{
+      max-height: 400px;
+    }
+  }
+}
