@@ -9,11 +9,15 @@
 |--------------------------------------------------------------------------
 */
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:300,400|Roboto:300');
 //@import url('https://fonts.googleapis.com/css?family=Yellowtail');
 
 $bodyBackground: #fff;
-$headerColor: #2196F3;
+$brand-primary: #136efb;
+$brand-success: #28cb75;
+$brand-primary-alt: lighten($brand-primary, 25%);
+$headerColor: $brand-primary;
+$gradient: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
 $heroFontFamily: 'Merriweather';
 $heroFontSize: 3em; // Not Used
 $subheadingColor: #9e9e9e;
@@ -26,7 +30,7 @@ $postPreviewContainerColor: $headerColor;
 $postTitleColor: white;
 $postPreviewPadding: 15px;
 $linkColor: $headerColor;
-$hrColor: #dddddd;
+$hrColor: $brand-primary-alt;
 $imageBorderColor: #ccc;
 $postPreviewContainerBackgroundColor: #fff;
 $postPreviewContainerBorderColor: #fff;
@@ -228,4 +232,29 @@ body{
       max-height: 400px;
     }
   }
+}
+
+.navbar-default {
+  font-family: 'Roboto' !important;
+  font-weight: 300;
+  &#head-c {
+    background: $bodyBackground;
+    margin: 0;
+    border: none;
+    border-radius: 0px;
+    font-size: 30px;
+    font-family: $heroFontFamily;
+    height: 90px;
+
+    a {
+      color: #fff;
+      color: $brand-primary;
+    }
+    .navbar-brand {
+      font-size: 35px;
+      margin-top: 20px;
+      margin-left: 15px;
+    }
+  }
+
 }
